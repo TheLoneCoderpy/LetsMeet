@@ -24,3 +24,8 @@ Die personenbezogenen Daten müssen gemäß der DSGVO, die seit 2018 in der EU g
 ## Vorraussetzungen für Datenspeicherung
 Der Verantwortliche muss in der Lage sein nachzuweisen, dass die betroffenen Person zur Verarbeitung ihrer personenbezogenen Daten zugestimmt hat. <br>Diese Einwilligung muss in verständlicher und leicht zugänglicher Form in einer klaren und einfachen Sprache erfolgen. <br>
 Eine Einwilligung kann jederzeit wiederrufen werden. Dies muss ebenfalls so einfach sein, wie die Erteilung der Einwilligung.
+
+<br><br>
+
+# SQL
+## Tabellen erstellen

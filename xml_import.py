@@ -1,5 +1,4 @@
 def get_xml_data() -> dict:
-
     import xml.etree.ElementTree as ET
 
     tree = ET.parse("Lets_Meet_Hobbies.xml")
