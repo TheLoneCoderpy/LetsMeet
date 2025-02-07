@@ -43,4 +43,14 @@ def get_excel_data():
 
     df_out = df.to_dict(as_series=False)
 
+    for c in ["Prio1", "Prio2", "Prio3", "Prio4", "Prio5"]:
+        for i in range(len(df_out[c])):
+            e = df_out[c][i]
+            try:
+                e = int(e)
+            except:
+                e = 0
+            df_out[c][i] = e
+            
+
     return df_out
