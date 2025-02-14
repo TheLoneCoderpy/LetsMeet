@@ -55,26 +55,26 @@ CREATE TABLE User (
     createdAt DATETIME,
     updatedAt DATETIME,
     phone varchar(100),
-    Image_ID int
+    Image_ID int REFERENCES Image(ID)
 )
 
 CREATE TABLE Like (
     ID int NOT NULL PRIMARY KEY,
-    User_ID int,
+    User_ID int REFERENCES User(ID),
     liked_email varchar(1000),
     like_status varchar(100),
     like_timestamp DATETIME
 )
 
 CREATE TABLE Friendship (
-    User_ID int,
-    Friend_ID int
+    User_ID int REFERENCES User(ID),
+    Friend_ID int REFERENCES User(ID)
 )
 
 CREATE TABLE Conversation (
     ID int NOT NULL PRIMARY KEY,
-    receiver_email varchar(1000),
-    user_email varchar(1000)
+    receiver_email varchar(1000) REFERENCES User(E-Mail),
+    user_email varchar(1000) REFERENCES User(E-Mail)
 )
 
 CREATE TABLE Message (
@@ -91,8 +91,8 @@ CREATE TABLE Hobby (
 
 CREATE TABLE User_Hobby (
     ID int NOT NULL PRIMARY KEY,
-    User_ID int,
-    Hobby_ID int,
+    User_ID int REFERENCES User(ID),
+    Hobby_ID int REFERENCES Hobby(ID),
     priority int
 )
 
@@ -103,6 +103,6 @@ CREATE TABLE Image (
 )
 
 CREATE TABLE User_Image (
-    Image_ID int,
-    User_ID int
+    Image_ID int REFERENCES Image(ID),
+    User_ID int REFERENCES User(ID)
 )
