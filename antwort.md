@@ -29,3 +29,15 @@ Eine Einwilligung kann jederzeit wiederrufen werden. Dies muss ebenfalls so einf
 
 # SQL
 ## Tabellen erstellen
+
+CREATE TABLE User (
+    ID int NOT NULL PRIMARY KEY,
+    Nachname varchar(1000),
+    Vorname varchar(1000),
+    Straße varchar(1000),
+    Nr varchar(100),
+    PLZ varchar(100),
+    Ort varchar(1000),
+    Hobby1 varchar(1000),
+    Prio1 int
+)

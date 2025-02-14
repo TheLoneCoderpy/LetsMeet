@@ -1,5 +1,5 @@
 
-def get_excel_data():
+def get_excel_data() -> dict:
     import polars as pl
 
     def safe(l, idx):
