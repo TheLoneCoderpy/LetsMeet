@@ -30,6 +30,20 @@ Eine Einwilligung kann jederzeit wiederrufen werden. Dies muss ebenfalls so einf
 # SQL
 ## Tabellen erstellen
 
+DROP TABLE IF EXISTS
+    user_hobby_preferences,
+    user_hobbies,
+    friendships,
+    messages,
+    likes,
+    conversations,
+    user_photos,
+    hobbies,
+    users,
+    addresses,
+    user_images
+CASCADE;
+
 CREATE TABLE User (
     ID int NOT NULL PRIMARY KEY,
     Nachname varchar(1000),
