@@ -39,5 +39,70 @@ CREATE TABLE User (
     PLZ varchar(100),
     Ort varchar(1000),
     Hobby1 varchar(1000),
-    Prio1 int
+    Prio1 int,
+    Hobby2 varchar(1000),
+    Prio2 int,
+    Hobby3 varchar(1000),
+    Prio3 int,
+    Hobby4 varchar(1000),
+    Prio4 int,
+    Hobby5 varchar(1000),
+    Prio5 int,
+    E-Mail varchar(1000),
+    Geschlecht varchar(10),
+    Interessiert_an varchar(10),
+    Geburtsdatum DATE,
+    createdAt DATETIME,
+    updatedAt DATETIME,
+    phone varchar(100),
+    Image_ID int
+)
+
+CREATE TABLE Like (
+    ID int NOT NULL PRIMARY KEY,
+    User_ID int,
+    liked_email varchar(1000),
+    like_status varchar(100),
+    like_timestamp DATETIME
+)
+
+CREATE TABLE Friendship (
+    User_ID int,
+    Friend_ID int
+)
+
+CREATE TABLE Conversation (
+    ID int NOT NULL PRIMARY KEY,
+    receiver_email varchar(1000),
+    user_email varchar(1000)
+)
+
+CREATE TABLE Message (
+    ID int NOT NULL PRIMARY KEY,
+    Content TEXT,
+    timestamp DATETIME,
+    Conversation_ID int
+)
+
+CREATE TABLE Hobby (
+    ID int NOT NULL PRIMARY KEY,
+    Content TEXT
+)
+
+CREATE TABLE User_Hobby (
+    ID int NOT NULL PRIMARY KEY,
+    User_ID int,
+    Hobby_ID int,
+    priority int
+)
+
+CREATE TABLE Image (
+    ID int NOT NULL PRIMARY KEY,
+    data BLOB,
+    link varchar(10000)
+)
+
+CREATE TABLE User_Image (
+    Image_ID int,
+    User_ID int
 )
